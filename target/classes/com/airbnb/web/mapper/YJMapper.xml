@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.airbnb.web.mapper.YJMapper">
+
+   <insert id="insert" >
+   </insert>
+
+   <select id="selectList" parameterType="com.airbnb.web.command.Command" resultType="map">
+      SELECT * FROM Residence
+		
+ <!--      SELECT *
+		FROM (
+		SELECT @NO := @NO + 1 AS ROWNUM, A.*
+		FROM
+		  (
+		    SELECT *
+		    FROM Residence
+		  ) A,
+		  ( SELECT @NO := 0 ) B 
+		  ORDER BY host_serial DESC
+		) C
+		WHERE C.ROWNUM BETWEEN 1 AND 6 -->
+   </select>
+
+   <select id="count" >
+
+   </select>
+
+   <select id="selectOne">
+   
+   </select>
+
+   <update id="update" >
+   
+   </update>
+
+   <delete id="delete" >
+   
+   </delete> 
+</mapper>
